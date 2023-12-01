@@ -1,1 +1,1 @@
-export {}
+export * from './tast.interface';
