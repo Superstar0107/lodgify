@@ -12,26 +12,32 @@ To run the project, follow these steps:
 
 2. Navigate to the project directory in your terminal.
 
-3. Install the dependencies using npm:
+3. Install the dependencies using npm: (node version: v21.2.0)
 
    ```bash
    npm install
    ```
 
-4. Start the development server:
+4. Set Environment variable.
+
+   - Create .env file.
+   - Copy below variable.
+     `REACT_APP_API_URL=https://gist.githubusercontent.com/huvber/ba0d534f68e34f1be86d7fe7eff92c96/raw/98a91477905ea518222a6d88dd8b475328a632d3/mock-progress`
+
+5. Start the development server:
 
    ```bash
    npm run dev
    ```
 
-5. Test the application:
+6. Test the application:
 
    ```bash
    npm run test:server
    npm run test:cy:open
    ```
 
-6. Open your web browser and go to `http://localhost:5173` to view the widget.
+7. Open your web browser and go to `http://localhost:5173` to view the widget.
 
 ## Usage
 
