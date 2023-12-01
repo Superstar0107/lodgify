@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AppActions, RootState } from '@/store';
+import { LoadingComponent } from '@/components';
 
 import { AccordionComponent, ProgressBarComponent } from './components';
 import { Content, Header, Title } from './styled';
@@ -16,9 +17,9 @@ export function DashboardFeature() {
     dispatch(AppActions.task.getTaskList(apiUrl!));
   }, []);
 
-  const { taskList } = useSelector((state: RootState) => state.task);
+  const { isLoading, taskList } = useSelector((state: RootState) => state.task);
 
-  return (
+  return !isLoading ? (
     <>
       <Header>
         <Title cy-data-id="title">Lodgify Grouped Tasks</Title>
@@ -30,5 +31,7 @@ export function DashboardFeature() {
         )}
       </Content>
     </>
+  ) : (
+    <LoadingComponent />
   );
 }
