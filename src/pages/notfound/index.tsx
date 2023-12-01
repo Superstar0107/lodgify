@@ -1,3 +1,5 @@
+import { NotFoundFeature } from '@/features';
+
 export function NotFoundPage() {
-  return <>NotFoundPage</>;
+  return <NotFoundFeature />;
 }
